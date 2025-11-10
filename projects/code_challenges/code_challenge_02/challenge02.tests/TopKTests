@@ -1,0 +1,72 @@
+using Xunit;
+using challenge02;
+using System.Linq;
+
+public class TopKTests
+{
+    private readonly IFrequentWords _service = new TopKService();
+    
+    [Fact]
+    public void ItRuns()
+    {
+        Assert.True(true);
+    }
+
+    [Fact]
+    public void TopK_BasicParagraph_Works()
+    {
+        var text = @"Hello, hello!! This is a test. A simple, SIMPLE test: hello?";
+        var top = _service.TopKFrequentWords(text, 2).ToArray();
+
+        Assert.Equal(2, top.Length);
+        Assert.Equal(("hello", 3), top[0]);
+        Assert.Equal(("a", 2), top[1]);
+    }
+
+    [Fact]
+    public void TopK_Tiebreaker_LexicographicAsc()
+    {
+        var text = "beta alpha beta alpha Gama gama";
+        var top = _service.TopKFrequentWords(text, 3).ToArray();
+
+        Assert.Equal(("alpha", 2), top[0]);
+        Assert.Equal(("beta", 2), top[1]);
+        Assert.Equal(("gama", 2), top[2]);
+    }
+
+    [Fact]
+    public void TopK_KGreaterThanUnique_ReturnAll()
+    {
+        var text = "uno dos tres";
+        var top = _service.TopKFrequentWords(text, 10).ToArray();
+
+        Assert.Equal(3, top.Length);
+        Assert.Contains(top, t => t.Word == "uno" && t.Count == 1);
+    }
+
+    [Theory]
+    [InlineData("", 3)]
+    [InlineData("    ", 1)]
+    [InlineData(null, 5)]
+    public void TopK_EmptyOrNull_ReturnsEmpty(string input, int k)
+    {
+        var top = _service.TopKFrequentWords(input, k).ToArray();
+        Assert.Empty(top);
+    }
+
+    [Fact]
+    public void TopK_NonLetters_AreSeparators()
+    {
+        var text = "C# C++ C; c, c! c?  c#";
+        var top = _service.TopKFrequentWords(text, 1).Single();
+        Assert.Equal(("c", 6), top);
+    }
+
+    [Fact]
+    public void TopK_KZeroOrNegative_ReturnsEmpty()
+    {
+        var text = "one two two three three three";
+        Assert.Empty(_service.TopKFrequentWords(text, 0));
+        Assert.Empty(_service.TopKFrequentWords(text, -5));
+    }
+}

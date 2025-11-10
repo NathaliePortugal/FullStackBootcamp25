@@ -1,0 +1,138 @@
+using challenge03.Interfaces;
+using System.Globalization;
+using System.Runtime.CompilerServices;
+using System.Text.Json;
+
+namespace challenge03.Challenges;
+
+public class AmortizationAndExtraPayments : IChallenge
+{
+    public string Id => "student-loan";
+    public string Title => "Student Loan Amortization with Extra Payments";
+
+    private static decimal Pow(decimal b, int exp)
+    {
+        if (exp == 0) return 1m;
+        bool neg = exp < 0; int e = Math.Abs(exp);
+        decimal acc = 1m, baseVal = b;
+        while (e > 0)
+        {
+            if ((e & 1) == 1) acc *= baseVal;
+            baseVal *= baseVal;
+            e >>= 1;
+        }
+        return neg ? 1m / acc : acc;
+    }
+    public decimal FrenchAmortization(decimal monthlyRate, int term, decimal saldoAfterGrace)
+    {
+        if (term <= 0) throw new ArgumentException("term must be >= 1");
+        if (monthlyRate == 0m) return Math.Round(saldoAfterGrace / term, 2, MidpointRounding.AwayFromZero);
+
+        //couta = B0 * r / (1 - (1+r)^(-N))
+        decimal denom = 1m - Math.Exp((1 + rate), Math.Abs(term));
+        decimal couta = saldoAfterGrace * monthlyRate / denom;
+        return Math.Round(cuota, 2, MidpointRounding.AwayFromZero);
+    }
+    public decimal CalculateSaldoAfterGrace(decimal principal, decimal monthlyRate, int graceMonths)
+    {
+        // Aplica capitalización mensual G veces: B = P * (1+r)^G
+        if (graceMonths <= 0) return principal;
+        
+        decimal saldoAfter = principal * Pow(1m + monthlyRate, graceMonths);
+        return Math.Round(saldoAfter, 2, MidpointRounding.AwayFromZero);
+    }
+    public string Run(string[] args)
+    {
+        //dotnet run --project challenge03 -- student-loan principal=10000 rate=6 term=120 grace=3 months=24
+
+        var principalArg = args.FirstOrDefault(a => a.StartsWith("principal=")) ?? "principal=";
+        var rateArg = args.FirstOrDefault(a => a.StartsWith("rate=")) ?? "rate";
+        var termArg = args.FirstOrDefault(a => a.StartsWith("term=")) ?? "term";
+        var graceArg = args.FirstOrDefault(a => a.StartsWith("grace=")) ?? "grace";
+        var monthsArg = args.FirstOrDefault(a => a.StartsWith("months=")) ?? "months";
+
+        var principal = decimal.TryParse(principalArg, NumberStyles.Number, CultureInfo.InvariantCulture, out decimal val) ? val : 0; //P
+        var annualRate = decimal.TryParse(rateArg, NumberStyles.Number, CultureInfo.InvariantCulture, out decimal val) ? val : 0; //R
+        var term = int.TryParse(termArg, NumberStyles.Number, CultureInfo.InvariantCulture, out int val) ? val : 0; //N
+        var grace = int.TryParse(graceArg, NumberStyles.Number, CultureInfo.InvariantCulture, out int val) ? val : 0; //G
+        var months = int.TryParse(monthsArg, NumberStyles.Number, CultureInfo.InvariantCulture, out int val) ? val : 0;
+
+        var tasaMensual = annualRate / 100m / 12m;
+        var saldo_after_grace = CalculateSaldoAfterGrace(principal,tasaMensual,grace);
+        var amortF = monthlyPayment(tasaMensual, term, saldo_after_grace);
+        
+        decimal remainingBalance;
+        decimal totalInterestPaid;
+        int? paidOffMonth = null;
+    
+        if (months <= grace)
+        {
+            // Aún en gracia: no hay pagos ni interés pagado (el interés se capitalizó)
+            remainingBalance = principal * Pow(1m + r, months);
+            totalInterestPaid = 0m;
+        }
+        else
+        {
+            // Meses de pago a simular = min(M - G, term)
+            int payMonths = Math.Min(months - grace, term);
+            decimal balance = saldoAfterGrace;
+            totalInterestPaid = 0m;
+
+            for (int m = 1; m <= payMonths; m++)
+            {
+                if (balance <= 0m) { paidOffMonth ??= grace + (m - 1); break; }
+
+                decimal interest = balance * r;
+                decimal principalPortion = monthlyPayment - interest;
+
+                if (principalPortion > balance)
+                {
+                    // Última cuota efectiva
+                    principalPortion = balance;
+                    monthlyPayment = interest + principalPortion;
+                }
+
+                totalInterestPaid += interest;
+                balance -= principalPortion;
+
+                if (balance <= 0m)
+                {
+                    balance = 0m;
+                    paidOffMonth = grace + m; // mes calendario en que se liquida
+                    break;
+                }
+            }
+
+            remainingBalance = balance;
+        }
+
+        // 5) Redondeos de salida (al final)
+        decimal R2(decimal x) => Math.Round(x, 2, MidpointRounding.AwayFromZero);
+        var result = new
+        {
+            monthlyPayment = R2(monthlyPayment),
+            remainingBalance = R2(remainingBalance),
+            totalInterestPaid = R2(totalInterestPaid),
+            paidOffMonth = (paidOffMonth.HasValue && paidOffMonth.Value <= months) ? paidOffMonth : null
+        };
+
+        return JsonSerializer.Serialize(result);
+
+        //TasaMensual = (R/100)/12
+        /* French amort if r>0
+            cuota= B0 * (r / 1- (1+r)^-N)
+            B0 = saldo luego de gracia
+            if r = 0 then cuota = B0/N
+        */
+
+
+        //Salida con JSON
+        /*
+        montlyPayment : cuota mensual fija a partir del saldo post-gracia (si R =0 cuota es saldo/N)
+        remainingBalance : saldo restante luego de M meses desde inicio. If M <= G then no cuota se pago
+        totalInterestPaid : interes tatoal efecticamente pagado hasta el mes M. If M <= G then 0
+        paidOffMonth : mes que todo se pago, si ocurre antes o en M else null
+        */
+
+    }
+}

@@ -1,0 +1,44 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run → TwoSum challenge",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/challenge03/bin/Debug/net8.0/challenge03.dll",
+      "args": ["two-sum", "nums=2,7,11,15", "target=9"],
+      "cwd": "${workspaceFolder}/challenge03",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Run → ValidParentheses Challenge",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/challenge03/bin/Debug/net8.0/challenge03.dll",
+      "args": ["valid-parentheses", "input=({[]})"],
+      "cwd": "${workspaceFolder}/challenge03",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Run → Custom Args (manual)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/challenge03/bin/Debug/net8.0/challenge03.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/challenge03",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Test → Run All xUnit Tests",
+      "type": "coreclr",
+      "request": "launch",
+      "program": "dotnet",
+      "args": ["test", "--no-build", "--nologo", "--verbosity", "minimal"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    }
+  ]
+}

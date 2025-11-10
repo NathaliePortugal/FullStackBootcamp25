@@ -1,0 +1,102 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "challenge03/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/challenge03.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/challenge03.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "challenge03/1.0.0": {
+      "type": "project",
+      "path": "../challenge03/challenge03.csproj",
+      "msbuildProject": "../challenge03/challenge03.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "challenge03 >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\natha\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\natha\\OneDrive\\Documents\\GitHub\\FullStackBootcamp25\\projects\\code_challenges\\code_challenge_03\\challenge03.runner\\challenge03.runner.csproj",
+      "projectName": "challenge03.runner",
+      "projectPath": "C:\\Users\\natha\\OneDrive\\Documents\\GitHub\\FullStackBootcamp25\\projects\\code_challenges\\code_challenge_03\\challenge03.runner\\challenge03.runner.csproj",
+      "packagesPath": "C:\\Users\\natha\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\natha\\OneDrive\\Documents\\GitHub\\FullStackBootcamp25\\projects\\code_challenges\\code_challenge_03\\challenge03.runner\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\natha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {
+            "C:\\Users\\natha\\OneDrive\\Documents\\GitHub\\FullStackBootcamp25\\projects\\code_challenges\\code_challenge_03\\challenge03\\challenge03.csproj": {
+              "projectPath": "C:\\Users\\natha\\OneDrive\\Documents\\GitHub\\FullStackBootcamp25\\projects\\code_challenges\\code_challenge_03\\challenge03\\challenge03.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.300"
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

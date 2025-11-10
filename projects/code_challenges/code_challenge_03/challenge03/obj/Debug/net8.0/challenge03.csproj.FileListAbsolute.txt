@@ -1,0 +1,15 @@
+C:\Users\natha\OneDrive\Documents\GitHub\FullStackBootcamp25\projects\code_challenges\code_challenge_03\challenge03\bin\Debug\net8.0\challenge03.exe
+C:\Users\natha\OneDrive\Documents\GitHub\FullStackBootcamp25\projects\code_challenges\code_challenge_03\challenge03\bin\Debug\net8.0\challenge03.deps.json
+C:\Users\natha\OneDrive\Documents\GitHub\FullStackBootcamp25\projects\code_challenges\code_challenge_03\challenge03\bin\Debug\net8.0\challenge03.runtimeconfig.json
+C:\Users\natha\OneDrive\Documents\GitHub\FullStackBootcamp25\projects\code_challenges\code_challenge_03\challenge03\bin\Debug\net8.0\challenge03.dll
+C:\Users\natha\OneDrive\Documents\GitHub\FullStackBootcamp25\projects\code_challenges\code_challenge_03\challenge03\bin\Debug\net8.0\challenge03.pdb
+C:\Users\natha\OneDrive\Documents\GitHub\FullStackBootcamp25\projects\code_challenges\code_challenge_03\challenge03\obj\Debug\net8.0\challenge03.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\natha\OneDrive\Documents\GitHub\FullStackBootcamp25\projects\code_challenges\code_challenge_03\challenge03\obj\Debug\net8.0\challenge03.AssemblyInfoInputs.cache
+C:\Users\natha\OneDrive\Documents\GitHub\FullStackBootcamp25\projects\code_challenges\code_challenge_03\challenge03\obj\Debug\net8.0\challenge03.AssemblyInfo.cs
+C:\Users\natha\OneDrive\Documents\GitHub\FullStackBootcamp25\projects\code_challenges\code_challenge_03\challenge03\obj\Debug\net8.0\challenge03.csproj.CoreCompileInputs.cache
+C:\Users\natha\OneDrive\Documents\GitHub\FullStackBootcamp25\projects\code_challenges\code_challenge_03\challenge03\obj\Debug\net8.0\challenge03.sourcelink.json
+C:\Users\natha\OneDrive\Documents\GitHub\FullStackBootcamp25\projects\code_challenges\code_challenge_03\challenge03\obj\Debug\net8.0\challenge03.dll
+C:\Users\natha\OneDrive\Documents\GitHub\FullStackBootcamp25\projects\code_challenges\code_challenge_03\challenge03\obj\Debug\net8.0\refint\challenge03.dll
+C:\Users\natha\OneDrive\Documents\GitHub\FullStackBootcamp25\projects\code_challenges\code_challenge_03\challenge03\obj\Debug\net8.0\challenge03.pdb
+C:\Users\natha\OneDrive\Documents\GitHub\FullStackBootcamp25\projects\code_challenges\code_challenge_03\challenge03\obj\Debug\net8.0\challenge03.genruntimeconfig.cache
+C:\Users\natha\OneDrive\Documents\GitHub\FullStackBootcamp25\projects\code_challenges\code_challenge_03\challenge03\obj\Debug\net8.0\ref\challenge03.dll
