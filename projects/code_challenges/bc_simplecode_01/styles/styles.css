@@ -1,0 +1,99 @@
+h1{
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-family: 'Greek Freak';
+}
+.header-container{
+    background-color: #220e69;
+    color:#fff;
+    padding: 8px 16px;
+    display: flex;    
+    justify-content: space-between;
+}
+
+.main-container{
+    margin: 16px;
+}
+
+.main-section{
+    height: 100vh;
+    width: 100vw;
+    background-image: url("../assets/sakura1.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    justify-content: center;
+    height: calc(100vh - 68px);
+    width: 100vw;
+    display: flex;
+    align-items: center;
+}
+
+.main-section h1{
+    background-color: #ad35a3;
+}
+
+.header-container nav ul{
+    display: flex;
+    gap: 16px;
+    list-style: none;
+}
+
+.header-container nav ul a {
+    text-decoration: none;
+    color: violet;
+}
+
+.header-container nav ul a:hover {
+    text-decoration: underline;
+    color: whitesmoke;
+}
+
+
+
+
+button{
+    background-color: blueviolet;
+    border:none;
+    border-radius:  16px;
+    color: #fff;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.card-container {
+    display: flex;
+    gap: 16px;
+}
+
+.card {
+    background-color: #d1d1d1;
+    border: 1px solid black;
+    border-radius: 8px;
+    
+}
+
+.card:hover {
+    background-color: #e7e7e7;
+    cursor: pointer;
+    box-shadow: 0 4px 4px 4px #11111141;
+}
+
+.card-button-container {
+    display: flex;
+
+}
+
+.card img{
+    width: 100%;
+    border-top-left-radius: 8px ;
+    border-top-right-radius: 8px;
+    object-fit: cover;
+}
+.card-content{
+    padding:16px;
+}
+
+.card-title{
+    font-family: "Meie Script",'Gill Sans';
+    font-size: 24px;
+}
