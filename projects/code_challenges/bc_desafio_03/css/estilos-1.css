@@ -43,6 +43,10 @@ body {
   padding: 4px 8px;
   text-align: right; 
 }
+.game-img {
+  display: block;
+  margin: 0 auto; 
+}
 
 .game-name {
   font-size: 0.9rem;
@@ -96,3 +100,17 @@ body {
   font-size: 0.9rem;
 }
 
+.game-list {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.game-list li {
+  margin-bottom: 10px; 
+  line-height: 1.4;
+}
+
+.game-list li::marker {
+  color: #0b5ab4; 
+  font-size: 1.1rem;
+}
