@@ -1,0 +1,115 @@
+/* Estilos generales que ya tenías */
+body {
+  background-color: rgb(225, 19, 100);
+  color: white;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.tittle {
+    margin: 20px;
+    background-color: rgb(188,16, 92);    
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    border: 5px solid white; /* Simplifiqué el borde */
+}
+
+.container {
+  margin: 20px 40px; /* Reduje un poco el margen lateral */
+  background-color: rgb(188, 16, 92); 
+  padding: 20px; 
+  border-radius: 6px;
+}
+
+.section-tittle {
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* Tarjeta principal */
+.game-card {
+  background-color: rgb(245, 242, 242); 
+  padding: 20px;
+  border-radius: 4px;
+  /* Esto hace que todo quede centrado */
+  text-align: center; 
+}
+
+.game-img {
+    width: 80%; /* La imagen ocupa el 80% del ancho */
+    max-width: 500px; /* Pero no dejamos que sea gigante */
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* --- ESTILOS DE LA DESCRIPCIÓN --- */
+.game-info {
+    color: black;
+    text-align: left; /* El texto lo leemos de izquierda a derecha */
+    padding: 0 20px; /* Un poco de aire a los costados */
+}
+
+.destacado {
+    background-color: #e6e6e6; /* Un fondo gris claro para resaltar */
+    padding: 15px;
+    border-radius: 8px; /* Bordes redondeados */
+    border-left: 5px solid rgb(188, 16, 92); /* Una linea decorativa a la izquierda */
+    margin: 15px 0;
+}
+
+.lista-mejorada li {
+    margin-bottom: 5px; /* Separamos un poco los items de la lista */
+    font-size: 18px;
+}
+
+.fecha {
+    font-weight: bold;
+    color: #555;
+}
+
+/* --- PRECIO Y BOTONES (LO IMPORTANTE) --- */
+
+.game-price { 
+    color: #28a745;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Aquí está el truco para alinear los cuadros */
+.contenedor-botones {
+    display: flex; /* Esto pone los elementos uno al lado del otro automáticamente */
+    gap: 20px; /* Esta es la distancia EXACTA entre los dos cuadros */
+    justify-content: center; /* Esto los centra en la pantalla */
+}
+
+.boton-compra {
+    border: 2px solid; /* Borde sólido */
+    padding: 15px; /* Relleno interior */
+    width: 45%; /* Cada botón ocupa casi la mitad del espacio */
+    text-align: center; /* Texto centrado */
+    cursor: pointer; /* Que aparezca la manito del mouse */
+    border-radius: 8px;
+}
+
+/* Estilo específico para IOS */
+.boton-compra.ios {
+    border-color: #28a745; /* Borde verde */
+    color: #28a745; /* Texto verde */
+}
+
+/* Estilo específico para Windows */
+.boton-compra.windows {
+    border-color: #007bff; /* Borde azul */
+    color: #007bff; /* Texto azul */
+}
+
+/* Un pequeño efecto al pasar el mouse (opcional pero fácil) */
+.boton-compra:hover {
+    background-color: #ddd; 
+}

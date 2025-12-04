@@ -1,0 +1,178 @@
+body {
+  background-color: rgb(225, 19, 100);
+  color: white;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+.back-btn{
+    align-items: center;
+    margin-top: 12px;
+    padding: 8px;
+    height: 40px;
+    width: 40px;
+
+}
+.back-btn:hover{
+    background-color: rgb(218, 60, 131);
+}
+.card-tittle{
+    margin: 20px 80px 20px 80px;
+    background-color: rgb(188,16, 92);    
+    font-weight: bold;
+    text-align: center;
+    padding: 12px 0;
+    border-left: 5px solid white;
+    border-right: 5px solid white;
+    display: flex;
+}
+.tittle
+{
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    padding: 12px 800px;
+}
+.game-card{
+    margin: 20px 80px;
+    background-color: rgb(188,16, 92);
+    border-left: 5px solid white;
+    border-right: 5px solid white;
+    align-items:flex-start;
+    display: flex;
+}
+.bkg-card{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+}
+.bkg-card2{
+    background-color: rgba(250, 248, 249, 0.849);
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: 16px;
+    margin-right: 4px;
+    display: flex;
+    border:solid;
+    border-width: 0.2px;
+}
+.img{
+    width: 50%;
+    padding: 12px 12px;
+}
+.game-inf{
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+.game-desc{
+    font-size: 20px;
+    font-style: italic;
+    border-style: solid;
+    border-bottom: 2px;
+    border-color:  rgb(188,16, 92);
+    margin-left: 80px;
+    margin-top: 20px;
+}
+.game-desc2{
+    font-size: 16px;
+    font-style:normal;
+    margin-left:8px;
+    margin-top: 20px;
+    text-align:left;
+}
+.game-list{
+    font-size: 16px;
+    font-style: normal;
+    margin-left: 8px;
+    margin-top:20px;
+    text-align:left;
+}
+.game-date{
+    font-size:16px;
+    font-style:normal;
+    margin-left: 8px;
+    text-align: left;
+    margin-top: 40px;
+}
+.cuadros{
+    margin-left: 24px;
+    margin-top: 32px;
+    font-style:italic;
+    text-align:left;
+}
+.prices{
+  display: flex;
+  align-items: center;
+}
+.old-price{
+    font-size:20px;
+    border: 1px;
+    border-style: inset;
+    width: 152px;
+    height: 32px;
+    text-decoration: line-through;
+    padding: 4px 8px;
+    background-color: rgb(9, 53, 9);
+    color: antiquewhite;
+    margin-top: 4px;
+    align-items: center;
+}
+.new-price{
+    font-size:24px;
+    border: 1px;
+    border-style: inset;
+    width: 180px;
+    height: 44px;
+    padding: 4px 8px;
+    background-color: rgb(12, 114, 12);
+    color: rgb(243, 243, 243);
+    margin-left: 24px;
+    align-items: center;
+}
+.buy{
+    font-size:24px;
+    border: 1px;
+    border-style: inset;
+    width: 2 px;
+    height: 52px;
+    padding: 12px 32px;
+    background-color: rgb(12, 114, 12);
+    color: rgb(243, 243, 243);
+    margin-left: 200px;
+    align-items: center;
+}
+.buy:hover{
+    background-color: rgb(4, 78, 4);
+}
+.images{
+        display: flex;
+}
+.img2{
+    margin-left: 12px;
+    margin-right: 40px;
+    height: 400px;
+    width: 900px;
+    align-items: center;
+    width: 95%;
+    padding: 12px 0px;
+    border: 9px;
+
+}
+.footer {
+    background-color: rgb(246, 140, 165);
+    color: white;
+    text-align: center;
+    padding: 12px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 76px;
+    margin-right: 80px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
