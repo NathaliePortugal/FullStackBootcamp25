@@ -11,8 +11,10 @@ body {
 
 .title
 {
-    background-color: rgb(188,16, 92);    
-    font-size: 24px;
+    margin: 20px 80px 20px 80px;
+    background-color: rgb(188,16, 92);
+    font-size: 40px;
+    font-weight: bold;
     text-align: center;
     position: relative;
     padding: 20px 0;
@@ -20,18 +22,19 @@ body {
     border-right: 5px solid white;
 }
 .container {
+  margin: 20px 80px 20px 80px;
   background-color: rgb(188, 16, 92); 
-  margin: 20px;
   padding: 16px;
   border-radius: 6px;
 }
-
 .section-title {
-  margin: 0 0 12px 0;
+  margin: 24px 0 24px 0;
+  font-size: 32px;
   font-weight: bold;
   color: white;
 }
 .game-card {
+  padding: 20px 0px 0px 0px;
   background-color: white; 
   border-radius: 4px;
   overflow: hidden;
@@ -39,19 +42,20 @@ body {
 }
 .game-header {
   background-color: white;
-  border-bottom: 1px dotted #555; 
-  padding: 4px 8px;
+  padding: 12px 20px 0px 20px;
   text-align: right; 
 }
-.game-img {
-  display: block;
-  margin: 0 auto; 
+.game-img{
+    padding: 12px 20px;
+    border-top-left-radius:2px;
+    border-top-right-radius: 2px;
+    width: 100%;
 }
 
 .game-name {
-  font-size: 0.9rem;
+  font-size: 24px;
   font-weight: bold;
-  color: rgb(188, 16, 92); 
+  color: rgb(145, 11, 71); 
 }
 .game-description {
   background-color: white;
@@ -65,12 +69,10 @@ body {
 }
 .dotted-separator {
   border: none;
-  border-top: 1px dotted #666;
-  margin: 0; 
+  border-top: 2px dotted #b8002e;
+  margin: 20px; 
   margin-bottom: 8px; 
 }
-
-
 .buy-btn {
   display: inline-block; 
   margin: 16px auto;
