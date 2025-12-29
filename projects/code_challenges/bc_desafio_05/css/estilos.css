@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+    background-color: #000;
+}
+
+body {
+    padding-top: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40px;
+    background: #0a0a0a;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(15,15,15,1) 100%);
+    height: 100%;
+}
+
+h1 {
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 0 7px hsla(0, 50%, 50%, 1);
+}
+
+h1 > strong {
+    font-style: italic;
+}
+
+.btn-presentar{
+  display: inline-block;
+  margin: 18px auto 0;
+  padding: 12px 22px;
+  border-radius: 14px;
+
+  font-size: 22px;
+  font-weight: 700;
+
+  background: #ff2d2d;
+  color: #fff;
+
+  cursor: pointer;
+  user-select: none;
+
+  box-shadow: 0 10px 0 #9d1414;
+  transform: translateY(0);
+  transition: transform 120ms ease, box-shadow 120ms ease, filter 120ms ease;
+}
+
+#btn-presentar{
+  display: block;
+  width: fit-content;
+}
+
+.btn-presentar:hover{
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+.btn-presentar:active{
+  transform: translateY(8px);
+  box-shadow: 0 2px 0 #9d1414;
+}
+
+
+#cajas {
+    width: 80%;
+    margin: 20px auto 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+#cajas > div {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 10px solid #000;
+    transition: background-position .9s linear 2s, border-bottom-color 1.2s, background-color .5s;
+    transition-delay: .4s;
+    background-color: #000;
+    background-position: -180px -40px;
+    background-repeat: no-repeat;
+}
+
+#cajas > div[title="Presentado"] {
+    background-position: 20px 20px;
+    background-color: #fff;
+    border-bottom-color: #fff;
+}
+
+#cajas > div:after {
+    transition: background-position .8s cubic-bezier(0.18, 0.89, 0.32, 1.28) .7s, box-shadow .2s linear .7s;
+    content: "";
+    width: 200px;
+    height: 200px;
+    background: url('../img/cortina.png') -100px -2px no-repeat;
+    position: absolute;
+}
+
+#cajas > div[title="Presentado"]:after {
+    background-position: 100px -2px;
+    box-shadow: -19px 20px 36px 5px hsla(0, 100%, 100%, .5);
+}
+
+#cajas > div:not([title="Presentado"]):hover:after {
+    transition: background-position 1s;
+    transition-delay: 0s;
+    background-position: -80px -2px;
+}
+
+#mario {
+    background: url('../img/mario.png');
+}
+
+#luigi {
+    background: url('../img/luigi.png');
+}
+
+#bowser {
+    background: url('../img/bowser.png');
+}
+
+#peach {
+  background: url('../img/peach.png');
+}
+
+#yoshi {
+  background: url('../img/yoshi.png');
+}
+
+#toadette {
+  background: url('../img/toadette.jpg');
+}
+
+#daisy {
+  background: url('../img/daisy.png');
+}
