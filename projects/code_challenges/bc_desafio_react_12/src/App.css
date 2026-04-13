@@ -1,0 +1,64 @@
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #0d0010;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.app-titulo {
+  font-size: 2.5rem;
+  color: #cc00ff;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  text-shadow: 0 0 16px #cc00ff, 0 0 40px #cc00ff44;
+}
+
+.app-form {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.app-input {
+  background-color: #1a0a1e;
+  border: 1px solid #cc00ff;
+  color: #ffffff;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  outline: none;
+  font-family: inherit;
+  transition: box-shadow 0.2s;
+}
+
+.app-input:focus {
+  box-shadow: 0 0 10px #cc00ff;
+}
+
+.app-input::placeholder {
+  color: #7a4d8a;
+}
+
+.app-boton {
+  background-color: #cc00ff;
+  color: #0d0010;
+  border: none;
+  padding: 0.6rem 1.4rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.app-boton:hover {
+  background-color: #ff2d78;
+  box-shadow: 0 0 12px #ff2d78;
+}

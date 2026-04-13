@@ -1,0 +1,45 @@
+.clima-card {
+  background-color: #1a0a1e;
+  border: 2px solid #cc00ff;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 380px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 0 24px #cc00ff88, 0 0 60px #1a0a1e;
+}
+
+.clima-ciudad {
+  font-size: 1.6rem;
+  color: #ff2d78;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px #ff2d78;
+}
+
+.clima-temperatura {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #39ff14;
+  text-shadow: 0 0 14px #39ff14;
+  margin: 0.5rem 0;
+}
+
+.clima-mensaje {
+  font-size: 1.1rem;
+  color: #ff2d78;
+  margin-top: 0.75rem;
+  text-shadow: 0 0 8px #ff2d78;
+  letter-spacing: 0.05em;
+}
+
+.clima-estado {
+  color: #cc00ff;
+  font-size: 1rem;
+}
+
+.clima-error {
+  color: #ff4444;
+  font-size: 0.95rem;
+}
