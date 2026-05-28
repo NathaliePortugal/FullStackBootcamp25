@@ -1,0 +1,50 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 60px);
+  text-align: center;
+  padding: 2rem;
+  gap: 1.5rem;
+}
+
+.home-titulo {
+  font-size: 3rem;
+  color: #cc00ff;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  text-shadow: 0 0 20px #cc00ff, 0 0 50px #cc00ff44;
+}
+
+.home-subtitulo {
+  font-size: 1.2rem;
+  color: #ff2d78;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.home-descripcion {
+  max-width: 560px;
+  color: #cccccc;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.home-boton {
+  background-color: #cc00ff;
+  color: #0d0010;
+  text-decoration: none;
+  padding: 0.7rem 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.home-boton:hover {
+  background-color: #ff2d78;
+  box-shadow: 0 0 14px #ff2d78;
+}

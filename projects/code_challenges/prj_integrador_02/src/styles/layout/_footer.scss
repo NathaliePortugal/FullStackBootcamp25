@@ -1,0 +1,19 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.site-footer {
+  margin-top: v.$space-7;
+  border-top: 1px solid v.$color-border;
+  background: v.$panel-bg;
+}
+
+.site-footer__inner {
+  @include m.container;
+  padding: v.$space-5 0;
+}
+
+.site-footer__text {
+  margin: 0;
+  color: v.$color-muted;
+  font-size: 0.95rem;
+}

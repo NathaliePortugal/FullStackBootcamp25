@@ -1,0 +1,44 @@
+@use "../abstracts/variables" as v;
+
+.rating {
+  display: inline-flex;
+  align-items: center;
+  gap: v.$space-3;
+  margin-top: auto;
+  padding-top: v.$space-3;
+}
+
+.rating__label {
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  opacity: v.$alpha-92;
+}
+
+.rating__dots {
+  display: inline-flex;
+  align-items: center;
+  gap: v.$space-2;
+}
+
+.rating__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: v.$radius-pill;
+  background: rgba(v.$color-white, v.$alpha-border-strong);
+  border: 1px solid rgba(v.$color-white, v.$alpha-border);
+
+  &--on {
+    background: rgba(v.$accent-blood, 0.55);
+    border-color: rgba(v.$accent-blood, 0.60);
+    box-shadow: 0 0 10px rgba(v.$accent-blood, 0.28);
+  }
+}
+
+.rating__value {
+  min-width: 3ch;
+  text-align: right;
+  font-size: 0.85rem;
+  color: v.$color-muted;
+}

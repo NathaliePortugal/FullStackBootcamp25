@@ -1,0 +1,36 @@
+@use "../abstracts/variables" as v;
+
+.contact-layout {
+  display: grid;
+  gap: v.$space-6;
+  grid-template-columns: 1fr;
+
+  @media (min-width: v.$bp-lg) {
+    grid-template-columns: 1fr 320px;
+    align-items: start;
+  }
+}
+
+.contact-aside {
+  .card__body {
+    padding: v.$space-5;
+  }
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: v.$space-3;
+  margin-top: v.$space-4;
+}
+
+.contact-list__item {
+  display: flex;
+  align-items: center;
+  gap: v.$space-3;
+}
+
+.contact-list__value {
+  font-size: 0.9rem;
+  color: v.$color-muted;
+}

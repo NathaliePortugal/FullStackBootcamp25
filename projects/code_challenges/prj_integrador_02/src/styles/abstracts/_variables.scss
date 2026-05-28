@@ -1,0 +1,78 @@
+$font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+$font-display: "Cinzel", serif;
+
+$color-black: #000;
+$color-white: #fff;
+
+$color-bg: #0b0c10;
+$color-surface: #121420;
+$color-surface-2: #171a2a;
+$color-text: #e8e8f0;
+$color-muted: #a9acc2;
+$color-danger: #ff4c6a;
+$color-danger-soft: rgba($color-danger, 0.18);
+$color-danger-strong: rgba($color-danger, 0.85);
+$color-success: #33ffc7;
+$color-success-soft: rgba($color-success, 0.18);
+
+$color-primary: #a60bff;
+$color-accent: #ff2e63;
+$accent-blood: #b0122a;
+$accent-neon: #33ffc7;
+$accent-neon-strong: rgba($accent-neon, 0.95);
+$accent-neon-border: rgba($accent-neon, 0.75);
+$accent-neon-soft: rgba($accent-neon, 0.35);
+$accent-neon-glow: rgba($accent-neon, 0.18);
+
+$alpha-92: 0.92;
+$alpha-75: 0.75;
+$alpha-65: 0.65;
+$alpha-55: 0.55;
+$alpha-25: 0.25;
+
+$alpha-glass: 0.72;
+$alpha-subtle: 0.04;
+$alpha-border: 0.14;
+$alpha-border-strong: 0.18;
+
+$color-border: rgba($color-white, 0.08);
+$panel-bg: rgba(10, 12, 18, 0.62);
+$panel-border: rgba($color-white, 0.10);
+
+$accent-blood-soft: rgba($accent-blood, 0.35);
+$accent-neon-soft-alt: rgba($accent-neon, 0.22);
+
+$radius-md: 14px;
+$radius-lg: 18px;
+$radius-sm: 12px;
+$radius-pill: 999px;
+
+$shadow-soft: 0 10px 30px rgba($color-black, 0.35);
+
+$container-max: 1100px;
+
+$space-1: 4px;
+$space-2: 8px;
+$space-3: 12px;
+$space-4: 16px;
+$space-5: 24px;
+$space-6: 32px;
+$space-7: 48px;
+$space-8: 64px;
+
+$bp-sm: 480px;
+$bp-md: 768px;
+$bp-lg: 1024px;
+
+$surface-1: $color-surface;
+$surface-2: $color-surface-2;
+
+$motion-fast: 180ms;
+$motion-ease: ease;
+
+$card-radius: $radius-lg;
+$card-hover-lift: 4px;
+$card-media-height: 220px;
+$card-padding: $space-4 + 2px;
+$card-gap: $space-3;
+$card-footer-gap: $space-4;

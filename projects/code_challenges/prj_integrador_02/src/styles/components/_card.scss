@@ -1,0 +1,109 @@
+@use "../abstracts/variables" as v;
+
+.card {
+  border: 1px solid var(--card-border, #{v.$color-border});
+  border-radius: v.$card-radius;
+  box-shadow: v.$shadow-soft;
+  overflow: hidden;
+  background: v.$panel-bg;
+  transition:
+    transform v.$motion-fast v.$motion-ease,
+    border-color v.$motion-fast v.$motion-ease;
+
+  &:hover {
+    transform: translateY(calc(-1 * #{v.$card-hover-lift}));
+    border-color: var(--card-border-hover, #{rgba(v.$color-white, 0.14)});
+  }
+}
+
+.card--product {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card__media {
+  overflow: hidden;
+}
+
+.card__img {
+  width: 100%;
+  height: v.$card-media-height;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.card__body {
+  padding: v.$card-padding;
+  display: flex;
+  flex-direction: column;
+  gap: v.$card-gap;
+  flex: 1;
+}
+
+.card__meta {
+  display: flex;
+  gap: v.$space-3;
+  flex-wrap: wrap;
+}
+
+.card__title {
+  margin: 0;
+  font-size: 1.1rem;
+  font-family: v.$font-display;
+  letter-spacing: 0.2px;
+  color: v.$color-white;
+}
+
+.card__text {
+  margin: 0;
+  color: rgba(v.$color-text, v.$alpha-92);
+  line-height: 1.5;
+  font-size: 0.95rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: calc(1.5em * 3);
+}
+
+.card__footer {
+  margin-top: auto;
+  padding-top: v.$space-3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: v.$card-footer-gap;
+}
+
+.price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: v.$color-white;
+  white-space: nowrap;
+}
+
+.stock {
+  font-size: 0.8rem;
+  color: rgba(v.$color-text, v.$alpha-92);
+  white-space: nowrap;
+}
+
+.products-grid {
+  display: grid;
+  gap: v.$space-5;
+  grid-template-columns: 1fr;
+
+  @media (min-width: v.$bp-md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: v.$container-max) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card--village .card__img { object-position: center 45%; }
+.card--silent-f .card__img { object-position: center 40%; }
+.card--outlast .card__img { object-position: center 45%; }
