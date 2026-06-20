@@ -1,0 +1,63 @@
+@use "../abstracts/variables" as v;
+
+:root {
+  --card-bg: rgba(255, 255, 255, #{v.$alpha-subtle});
+  --card-border: #{v.$color-border};
+  --card-border-hover: rgba(255, 255, 255, #{v.$alpha-border-strong});
+  --card-shadow: #{v.$shadow-soft};
+
+  --card-radius: #{v.$radius-lg};
+  --card-lift: 4px;
+  --card-pad: #{v.$space-5};
+  --card-gap: #{v.$space-3};
+  --card-media-height: 220px;
+  --card-motion-fast: 180ms;
+  --card-motion-ease: ease;
+
+  --form-grid-gap: #{v.$space-4};
+  --form-grid-gap-md: 18px;
+  --form-field-gap: 6px;
+
+  --form-panel-bg: #{v.$panel-bg};
+  --form-panel-border: #{v.$panel-border};
+  --form-panel-radius: #{v.$radius-lg};
+  --form-panel-pad: 22px;
+  --form-panel-pad-md: 28px;
+  --form-panel-shadow:
+    0 18px 60px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+
+  --form-control-bg: rgba(255, 255, 255, #{v.$alpha-subtle});
+  --form-control-bg-focus: rgba(255, 255, 255, 0.06);
+  --form-control-border: rgba(255, 255, 255, #{v.$alpha-border-strong});
+  --form-control-border-hover: rgba(255, 255, 255, 0.24);
+  --form-control-radius: #{v.$radius-sm};
+  --form-control-pad-y: 14px;
+  --form-control-pad-x: #{v.$space-4};
+  --form-control-font-size: 0.95rem;
+  --form-control-text: rgba(255, 255, 255, #{v.$alpha-92});
+
+  --form-focus-border: #{v.$accent-neon-border};
+  --form-focus-ring: 0 0 0 3px #{v.$accent-neon-glow};
+  --form-focus-glow: 0 0 18px #{v.$accent-neon-soft};
+
+  --form-fieldset-bg: rgba(255, 255, 255, 0.03);
+  --form-fieldset-border: rgba(255, 255, 255, #{v.$alpha-border});
+  --form-fieldset-radius: #{v.$radius-md};
+
+  --form-radio-bg: rgba(0, 0, 0, 0.22);
+  --form-radio-border: rgba(255, 255, 255, #{v.$alpha-border});
+  --form-radio-border-hover: rgba(51, 255, 199, 0.35);
+  --form-radio-gap: 10px;
+
+  --form-accent: #{v.$accent-neon-strong};
+
+  --form-motion-fast: 180ms;
+  --form-motion-mid: 160ms;
+  --form-motion-ease: ease;
+
+  --form-valid-border: #{v.$accent-neon-border};
+  --form-valid-ring: 0 0 0 3px #{v.$accent-neon-glow};
+  --form-invalid-border: #{v.$color-danger-strong};
+  --form-invalid-ring: 0 0 0 3px #{v.$color-danger-soft};
+}

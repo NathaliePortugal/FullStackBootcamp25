@@ -1,0 +1,61 @@
+@use "../abstracts/variables" as v;
+
+.hero {
+  padding-block: v.$space-7;
+  position: relative;
+  overflow: hidden;
+
+  @media (max-width: calc(#{v.$bp-md} - 1px)) {
+    min-height: 52vh;
+    padding-block: v.$space-6;
+  }
+
+  @media (max-width: calc(#{v.$bp-sm} - 1px)) {
+    min-height: 48vh;
+  }
+}
+
+.hero__eyebrow {
+  margin-bottom: v.$space-3;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: rgba(v.$color-white, v.$alpha-65);
+}
+
+.hero__title {
+  margin-bottom: v.$space-4;
+  font-size: 2.6rem;
+  line-height: 1.05;
+  color: v.$color-white;
+
+  @media (max-width: calc(#{v.$bp-md} - 1px)) {
+    font-size: 2.1rem;
+  }
+
+  @media (max-width: calc(#{v.$bp-sm} - 1px)) {
+    font-size: 1.85rem;
+  }
+}
+
+.hero__subtitle {
+  max-width: 62ch;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: rgba(v.$color-white, v.$alpha-75);
+}
+
+.hero__actions {
+  margin-top: 28px;
+  display: flex;
+  gap: v.$space-3;
+  flex-wrap: wrap;
+}
+
+.page-status {
+  min-height: 2em;
+  margin-top: v.$space-5;
+  font-size: 0.95rem;
+  color: v.$color-muted;
+  text-align: center;
+}

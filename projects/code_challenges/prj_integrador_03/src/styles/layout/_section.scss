@@ -1,0 +1,30 @@
+@use "../abstracts/variables" as v;
+
+.section {
+  padding: v.$space-7 0;
+
+  @media (min-width: v.$bp-md) {
+    padding: v.$space-8 0;
+  }
+}
+
+.section__header {
+  margin-bottom: 22px;
+}
+
+.section__title {
+  margin: 0 0 v.$space-2;
+  letter-spacing: 0.4px;
+}
+
+.section__subtitle {
+  margin: 0;
+  opacity: v.$alpha-75;
+  max-width: 70ch;
+}
+
+.section__cta {
+  margin-top: v.$space-6;
+  display: flex;
+  justify-content: center;
+}

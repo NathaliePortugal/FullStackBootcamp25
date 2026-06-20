@@ -1,0 +1,120 @@
+@use "../abstracts/variables" as v;
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  line-height: 1;
+  cursor: pointer;
+  font-family: inherit;
+  transition:
+    transform 160ms ease,
+    background-color 160ms ease,
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    color 160ms ease;
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  &:focus-visible {
+    outline: 2px solid rgba(v.$color-white, v.$alpha-65);
+    outline-offset: 2px;
+  }
+}
+
+.btn--primary {
+  font-family: v.$font-display;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgba(v.$color-white, v.$alpha-92);
+  background: linear-gradient(180deg, rgba(v.$accent-blood, 0.22), rgba(v.$color-black, 0.42));
+  border: 1px solid rgba(v.$accent-blood, v.$alpha-55);
+  border-radius: v.$radius-sm;
+  padding: 12px 20px;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    border-color: rgba(v.$accent-blood, 0.9);
+    box-shadow:
+      0 0 16px rgba(v.$accent-blood, 0.35),
+      inset 0 0 14px rgba(v.$accent-blood, v.$alpha-border-strong);
+  }
+
+  &:active {
+    box-shadow:
+      0 0 10px rgba(v.$accent-blood, 0.25),
+      inset 0 0 18px rgba(v.$accent-blood, 0.25);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -60%;
+    left: -40%;
+    width: 60%;
+    height: 220%;
+    transform: rotate(20deg);
+    background: linear-gradient(90deg, rgba(v.$color-white, 0), rgba(v.$color-white, 0.10), rgba(v.$color-white, 0));
+    opacity: 0;
+    transition: opacity 160ms ease, transform 260ms ease;
+    pointer-events: none;
+  }
+
+  &:hover::before {
+    opacity: 1;
+    transform: rotate(20deg) translateX(30%);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+  }
+}
+
+.btn--ghost {
+  font-family: v.$font-display;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  background: transparent;
+  color: rgba(v.$color-white, v.$alpha-92);
+  border: 1px solid rgba(v.$color-white, v.$alpha-border-strong);
+  border-radius: v.$radius-sm;
+  padding: 12px 18px;
+
+  &:hover {
+    border-color: rgba(v.$accent-blood, v.$alpha-55);
+    box-shadow: 0 0 14px rgba(v.$accent-blood, 0.22);
+  }
+}
+
+.btn--small {
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  letter-spacing: 0.4px;
+}
+
+.btn--icon {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border-radius: v.$radius-sm;
+  border: 1px solid v.$color-border;
+  background: rgba(v.$color-white, v.$alpha-subtle);
+  color: v.$color-text;
+  font-size: 1rem;
+
+  &:hover {
+    border-color: rgba(v.$accent-neon, 0.4);
+  }
+}
